@@ -27,8 +27,6 @@ def home():
 async def snip(url):
     statusmsg = ''
     try:
-        # print("get " + url + "...")
-        # print(len(url))
         if len(url)== 0:
             statusmsg = 'Empty URL'
             # return Response(content={"Error":"Empty url"}, status_code=400)
