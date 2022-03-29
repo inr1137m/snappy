@@ -19,6 +19,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def home():
+    return {"Status":"running"}
+
 @app.get("/snip/")
 async def snip(url):
     statusmsg = ''
