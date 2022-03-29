@@ -32,7 +32,7 @@ async def snip(url):
         if len(url)== 0:
             statusmsg = 'Empty URL'
             # return Response(content={"Error":"Empty url"}, status_code=400)
-        browser = await launch(headless=True, args=['--no-sandbox'])
+        browser = await launch(executablePath='/usr/bin/google-chrome', headless=True, args=['--no-sandbox'])
         page = await browser.newPage()
         await page.setViewport({
             "width":1024,
